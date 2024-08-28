@@ -65,7 +65,14 @@ async function doneVote(roomID) {
 
 	last = structuredClone(state);
 
-	state.current = { votes: {}, end: now + 1000 * 60, event: {}, voted: [] };
+	const noticeID = await client.sendNotice(roomID, "vote!").catch((e) => {
+		throw `Couldnt send message\n${e}`;
+	});
+
+	const notice = await client.getEvent(roomID, noticeID).catch(() => {});
+
+	state.current = { votes: {}, end: now + 1000 * 60, event: notice, voted: [] };
+	state.prior = { user: highestVoteKey, pl: 0 };
 }
 
 //Start Client
