@@ -1,0 +1,26 @@
+{
+	"current": {
+		"votes": {
+			"@user:example.com": 1,
+			"@deez:example.com": 3
+		},
+		"end": 0,
+		"event": {
+			"content": {
+				"body": "example event",
+				"m.mentions": {},
+				"msgtype": "m.text"
+			},
+			"event_id": "$61RUfTY4Xa6K4VfM9xwZoXDEytLvJmdigsfQrZLfRpY",
+			"origin_server_ts": 1724802025009,
+			"sender": "@jjj333:pain.agency",
+			"type": "m.room.message",
+			"unsigned": {
+				"transaction_id": "m1724802024707.444"
+			},
+			"room_id": "!odwJFwanVTgIblSUtg:matrix.org"
+		},
+		"voted": ["@examopl:example.com"]
+	},
+	"prior": { "user": "@user:example.com", "pl": 0 }
+}
